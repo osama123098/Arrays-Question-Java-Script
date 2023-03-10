@@ -1,14 +1,17 @@
 // Duplicate in array
-arr = [1,2,3,4,5,6,7,8,9,1]
+let arr = [2,3,4,1,9,2]
 function duplicate(a){
-    arr  = []
+    let array  = []
     for(i=0;i<a.length;i++){
-        if(!(a[i]in arr)){
-            arr.push(a[i])
+        let temp =a[i]
+        if((9 in [2,5,6,9])){
+            array.push(temp)
         }
         else
-        return true
+        return false
     }
-    return false
+    return true
 }
-console.log(duplicate(arr))
+let temp = new Set(arr)
+temp = Array.from(temp)
+console.log(temp)
