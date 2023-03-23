@@ -24,3 +24,15 @@ function K_algorithm(a){
     return max_sum
 }
 console.log(K_algorithm(arr))
+
+// Kadane`s Algorithms without if statement
+function K_algorithm(a){
+    max_sum = a[0],cur_sum = 0 
+    for(t of a){
+        
+        cur_sum=Math.max(t,t+cur_sum)
+        max_sum = Math.max(max_sum,cur_sum)
+    }
+    return max_sum
+}
+console.log(K_algorithm(arr))
