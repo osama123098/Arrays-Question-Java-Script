@@ -14,3 +14,5 @@ def find_missing_and_duplicate(nums):
     return [A, B]
 
 find_missing_and_duplicate([1,2,3,4,2,6])
+lst = [1,2,3,4,5]*3
+print(lst)

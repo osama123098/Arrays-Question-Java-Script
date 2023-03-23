@@ -2,14 +2,14 @@ function search_rotated(a,low,high,target){
     while(low<=high){
         let mid = Math.floor((low+high)/2)
         if(target==a[mid])
-            return mid+1
+            return mid
         else if(a[low]<=a[mid]){
             // low to mid sorted
             if(a[low]<=target&&target <a[mid])
-                high=mid+1
+                high=mid-1;
             
             else
-                low=mid-1
+                low=mid+1;
 
         }
         else
@@ -25,8 +25,8 @@ function search_rotated(a,low,high,target){
 }
 
 
-let arr = [3,4,5,6,7,8,9,0,1,2]
+let arr = [5,1,3]
 
 let n=arr.length,hi = n-1
 
-console.log( search_rotated(arr,0,hi,6))
+console.log( search_rotated(arr,0,hi,3))
